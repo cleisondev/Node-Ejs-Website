@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    
+    <!-- Inserting the ejs file here -->
+    <%- include('../partials/head'); %>
+
+    <body class="container">
+        
+        <%- include('../partials/header'); %>
+
+       <main>
+        <div class="jumbotron">
+            <h1>Node com EJS</h1>
+            <p>Vamos aprender a trabalhar com arquivos EJS</p>
+            <p><%= subtitle %></p>
+            
+        </div>
+        
+        <!-- The foreach gonna pass in each array and extract the content of it -->
+        <% qualities.forEach(function(quality){ %>
+            <li>
+                <!-- The equal here gonna print the text on the screen -->
+                <strong><%= quality.title %> </strong><%= quality.message %>
+            </li>
+        <% }) %>
+
+       </main>
+
+       <%- include('../partials/footer'); %>
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
